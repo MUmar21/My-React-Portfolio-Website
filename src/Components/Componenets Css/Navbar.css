@@ -1,0 +1,99 @@
+/* Main Header Styling */
+.sidebar {
+    font-family: "Exo 2", sans-serif;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 60px; /* Bubble size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    pointer-events: none; /* Disable pointer events to avoid blocking content */
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0;
+    pointer-events: auto; /* Enable pointer events on each link */
+}
+
+/* Bubble-like Link Styling */
+.navbar ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #ffffff;
+    background-color:rgba(24, 21, 44, 0.5); 
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 2px solid transparent;
+    margin-right: 5rem;
+    margin-bottom: 2rem;
+}
+
+.navbar ul li a:hover {
+    background-color: rgb(255, 29, 123, 0.5); /* Slight hover effect */
+}
+
+.navbar ul li a.active {
+    background-color: #ff1d7b; /* Active section color */
+    color: white;
+    border: 2px solid #ff0051;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .navbar ul li a {
+        width: 60px;
+        height: 60px;
+        font-size: 0.9rem;
+        margin-right: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 50px;
+    }
+
+    .navbar ul li a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.85rem;
+        margin-right: 5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 40px;
+    }
+
+    .navbar ul li a {
+        width: 40px;
+        height: 40px;
+        font-size: 0.58rem;
+        margin-right: 5rem;
+        margin-bottom: 1.5rem;
+    }
+}

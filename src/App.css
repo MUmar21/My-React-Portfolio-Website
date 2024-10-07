@@ -1,0 +1,28 @@
+#root {
+  /* background-color: #131120; */
+  background: radial-gradient(#9320ff,#4a1397);
+  max-width: 100%;
+  margin: 0 auto;
+  /* padding: 0.5rem; */
+  text-align: center;
+  /* box-shadow: 0 0 5PX 5px rgba(0, 0, 0, 0.5); */
+
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .projects-grid {
+    flex-direction: column;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .contact-container {
+    width: 90%;
+  }
+}

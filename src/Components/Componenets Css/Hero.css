@@ -1,0 +1,326 @@
+@font-face {
+  font-family: "Exo 2", sans-serif;
+    src: url('./fonts/mycustomfont.woff2') format('woff2'),
+       url('./fonts/mycustomfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Main Hero Section Styling */
+.hero {
+  /* background-color: #282842; */
+  /* background: radial-gradient(#9320ff,#4a1397); */
+  font-family: "Exo 2", sans-serif;
+  background-size: cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  flex-direction: column;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.hero-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hero-content {
+  background-color: #371B70;
+  text-align: left;
+  color: #fbf4f9;
+  max-width: 40%;
+  padding: 0 2em 2em;
+  margin-left: 8em;
+  border-radius: 50px;
+  animation: contentAppear 1.5s ease; /* Simple animation for logo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+.hero-content:hover{
+  border: 3px solid #ff217e;
+  box-shadow:  0 0 10px rgb(255, 29, 123,0.3), /* Main glow */
+                0 0 20px rgb(255, 0, 255, 0.2), /* Outer glow */
+                0 0 30px rgba(199, 27, 102, 0.3); 
+}
+.hero h1 {
+  color: #fff1fa;
+  /* text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.5); */
+  text-shadow:  0 0 10px rgb(255, 29, 123,0.3), /* Main glow */
+                0 0 20px rgb(255, 0, 255, 0.2), /* Outer glow */
+                0 0 30px rgba(199, 27, 102, 0.3); /* Soft glow */
+  font-size: 3.2em;
+  margin-bottom: 0.1em;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  line-height: 1.6;
+  width: 55%;
+  margin-bottom: -1em;
+  color: #ff217e;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+
+}
+.hero h3{
+  font-size: 1.5em;
+  text-shadow:  0 0 10px rgb(255, 29, 123,0.3), /* Main glow */
+  0 0 20px rgb(255, 0, 255, 0.2), /* Outer glow */
+  0 0 30px rgba(199, 27, 102, 0.3); /* Soft glow */
+}
+
+.hero-content p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+/* Button Styling */
+.hero-buttons {
+  margin-top: 1em;
+}
+
+.hero-buttons button {
+  padding: 0.8em 1.5em;
+  margin-right: 1em;
+  font-size: 1em;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #f83486;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.hero-buttons button:hover {
+  background-color: #8530f4;
+  transform: scale(1.05);
+}
+
+/* Social Media Links */
+.social-media {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.social-media a {
+  text-decoration: none;
+  margin-right: 1em;
+  font-size: 1.5em;
+  color: #18f0ff;
+}
+
+.social-media a:hover {
+  color: #007bff;
+}
+
+/* Hero Image Styling */
+.about-image img {
+  max-width: 50%;
+  height: auto;
+  margin-right: 15em;
+  border: 5px solid #b348ff;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transform: rotate(0.015turn);
+  animation: ImageAppear 0.6s ease; /* Simple animation for logo */
+}
+.about-image img:hover{
+  transform: scale(1.05);
+  border: 5px solid #ff1d7b;
+  box-shadow: 
+  0 0 15px rgb(255, 29, 123, 0.5), /* Main glow */
+  0 0 25px rgba(178, 69, 255, 0.6), /* Outer glow */
+  0 0 35px rgba(178, 69, 255, 0.4); /* Soft glow */
+}
+
+.work-experience li{
+  margin-left: -1.8em;
+  font-size: 1.2em;
+}
+
+/* Keyframes for Logo Animation */
+@keyframes ImageAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0.1turn);
+
+  }
+80%{
+  opacity: 1;
+  transform: scale(1.15) ;
+}  
+  100% {
+    transform: scale(1) rotate(0.015turn);
+  }
+}
+@keyframes contentAppear {
+  0% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }  
+
+}
+/* Responsive for mobile screens */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 2em 1em;
+  }
+  
+  .hero-layout {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 80%;
+    padding: 0 1em;
+    margin-left: 0em;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero h2 {
+    font-size: 1.8em;
+    width: 100%;
+  }
+
+  .hero-content p {
+    font-size: 1.1em;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .about-image img {
+    max-width: 60%;
+    margin: 0 auto;
+    margin-right: 0em;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    margin-top: 1.5em;
+  }
+
+  .hero-buttons button {
+    margin: 0.5em 0;
+    padding: 0.7em 1.2em;
+  }
+}
+.work-experience li{
+  margin-left: -1.8em;
+}
+
+/* For smaller tablets and large phones */
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 90%;
+    padding: 0;
+    margin-bottom: 1em;
+    text-align: center;
+    margin-left: 0em;
+  }
+
+  .hero h1 {
+    font-size: 2.2em;
+  }
+
+  .hero h2 {
+    font-size: 1.6em;
+  }
+
+  .hero-content p {
+    font-size: 1em;
+    width: 100%;
+  }
+
+  .about-image img {
+    max-width: 60%;
+    margin-right: 0em;
+  }
+  .hero-buttons button {
+    font-size: 0.9em;
+  }
+  .work-experience li{
+    margin-left: -1.5em;
+    font-size: 1em;
+  }
+  
+}
+
+/* For small devices */
+@media (max-width: 480px) {
+  .hero {
+    height: auto;
+    padding: 1.5em;
+  }
+  
+  .hero-layout {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-left: 0em;
+    margin-bottom: 5em;
+
+  }
+
+  .hero h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+  }
+
+  .hero h2 {
+    font-size: 1.4em;
+    margin-top: 1em;
+  }
+
+  .hero-content p {
+    font-size: 1.1em;
+    max-width: 85%;
+    margin-left: 1em;
+    text-align: left;
+  }
+
+  .about-image img {
+    max-width: 50%;
+    margin: 0 auto;
+    margin-right: 0em;
+  }
+
+  .hero-buttons {
+    margin-top: 2em;
+    flex-direction: column;
+    max-width: 40%;
+  }
+
+  .hero-buttons button {
+    font-size: 0.9em;
+    width: 100%;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+  }
+
+  .social-media a {
+    font-size: 1.2em;
+    margin-left: 1.5em;
+    margin-bottom: 1em;
+  }
+  .work-experience li{
+    margin-left: -0.8em;
+    font-size: 1em;
+    max-width: 90%;
+    text-align: left;
+  }
+  
+}
