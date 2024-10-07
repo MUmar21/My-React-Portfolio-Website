@@ -58,7 +58,7 @@ function Hero() {
 
         {/* Hero Image */}
         <div className="about-image">
-          <img src="./images/m.png" alt="About Me" />
+          <img src="images/m.png" alt="About Me" />
         </div>
       </div>
     </section>
