@@ -4,6 +4,7 @@
     text-align: center;
     color: white;
     position: relative;
+    margin-bottom: 10px; /* Add bottom margin to keep it above the navbar */
 }
 
 .footer-content {
@@ -32,6 +33,7 @@
 
 .footer-bottom {
     margin-top: 1.5rem;
+    padding-bottom: 1rem; /* Add padding for spacing */
 }
 
 .footer-bottom p {
@@ -41,6 +43,10 @@
 
 /* Adjust for smaller screens */
 @media (max-width: 768px) {
+    .footer {
+        margin-bottom: 30px; /* Increase bottom margin for smaller screens */
+    }
+
     .footer-logo {
         width: 60px;
     }
