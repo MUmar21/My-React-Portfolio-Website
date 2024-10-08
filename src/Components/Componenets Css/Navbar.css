@@ -1,36 +1,41 @@
-/* Main Header Styling */
+/* Main Sidebar Styling */
 .sidebar {
+    background-color: #10011cef;
     font-family: "Exo 2", sans-serif;
     position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 60px; /* Bubble size */
+    top: 50%; /* Center vertically */
+    right: 5%;
+    transform: translateY(-50%); /* Adjust vertical centering */
+    width: 100px;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack items vertically */
     align-items: center;
+    justify-content: center; /* Center items horizontally */
     z-index: 1000;
     pointer-events: none; /* Disable pointer events to avoid blocking content */
+    border-radius: 50px;
+    padding: 1em 0; /* Add padding for better spacing */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Add some shadow for a sleek effect */
 }
 
 .navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 1em; /* Add spacing between items */
+    pointer-events: auto; /* Enable interactions */
 }
 
 .navbar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .navbar ul li {
     margin: 0;
-    pointer-events: auto; /* Enable pointer events on each link */
 }
 
-/* Bubble-like Link Styling */
 .navbar ul li a {
     display: flex;
     justify-content: center;
@@ -40,18 +45,18 @@
     border-radius: 50%;
     text-decoration: none;
     color: #ffffff;
-    background-color:rgba(24, 21, 44, 0.5); 
+    background-color: rgba(24, 21, 44, 0.8);
     font-size: 1rem;
     font-weight: bold;
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
     border: 2px solid transparent;
-    margin-right: 5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem; /* Adjust bottom margin for better spacing */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Slight shadow for better depth */
 }
 
 .navbar ul li a:hover {
-    background-color: rgb(255, 29, 123, 0.5); /* Slight hover effect */
+    background-color: rgba(255, 29, 123, 0.7); /* Enhanced hover effect */
 }
 
 .navbar ul li a.active {
@@ -60,40 +65,73 @@
     border: 2px solid #ff0051;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
+/* Responsive Design for small screens with navbar at the bottom */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Take full width */
+        bottom: 0; /* Navbar at the bottom */
+        top: auto; /* Remove top property */
+        right: 0;
+        left: 0;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        flex-direction: row; /* Align items horizontally */
+        padding: 0.5em 0;
+        border-radius: 0; /* Remove border radius */
+        box-shadow: none; /* Remove shadow for cleaner look */
+        background-color: #10011cef; /* Consistent background color */
+    }
+
+    .navbar {
+        flex-direction: row; /* Horizontal layout */
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center;
+    }
+
     .navbar ul li a {
         width: 60px;
         height: 60px;
         font-size: 0.9rem;
-        margin-right: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .sidebar {
-        width: 50px;
-    }
-
-    .navbar ul li a {
-        width: 40px;
-        height: 40px;
-        font-size: 0.85rem;
-        margin-right: 5rem;
-        margin-bottom: 1.5rem;
+        margin: 0; /* Remove extra margins */
     }
 }
 
 @media (max-width: 480px) {
     .sidebar {
-        width: 40px;
+        width: 100%; /* Full width */
+        bottom: 0; /* Navbar at the bottom */
+        top: auto; /* Ensure top is removed */
+        right: 0;
+        left: 0;
+        transform: none;
+        display: flex;
+        justify-content: center; /* Center items horizontally */
+        flex-direction: row; /* Horizontal layout */
+        padding: 0.3em 0;
+        background-color: #10011cef; /* Consistent background color */
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center;
     }
 
     .navbar ul li a {
-        width: 40px;
-        height: 40px;
-        font-size: 0.58rem;
-        margin-right: 5rem;
-        margin-bottom: 1.5rem;
+        width: 50px;
+        height: 50px;
+        font-size: 0.75rem;
+        margin-right: 1.5em; /* Adjust spacing for smaller screens */
     }
 }
