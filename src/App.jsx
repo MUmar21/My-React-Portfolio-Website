@@ -25,14 +25,14 @@ function App() {
     <>
       <div>
         <Header />
-        <motion.div
+        {/* <motion.div
           initial="hidden"
           whileInView="visible"
           variants={fadeInUp}
           viewport={{ once: true, amount: 0.5 }}
-        >
+        > */}
           <Hero />
-        </motion.div>
+        {/* </motion.div> */}
 
         <Navbar />
         <motion.div
@@ -53,14 +53,14 @@ function App() {
           <Projects />
         </motion.div>
 
-        <motion.div
+        {/* <motion.div
           initial="hidden"
           whileInView="visible"
           variants={fadeInUp}
           viewport={{ once: true, amount: 0.5 }}
-        >
+        > */}
           <Tools />
-        </motion.div>
+        {/* </motion.div> */}
 
         {/* Comment out or include as needed */}
         {/* <motion.div
